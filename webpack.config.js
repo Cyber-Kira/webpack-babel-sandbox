@@ -49,7 +49,7 @@ module.exports = {
       },
 
       //
-      // Loading Styles
+      // Loading CSS
       //
       {
         test: /\.(css)$/,
@@ -59,6 +59,24 @@ module.exports = {
           },
           {
             loader: "css-loader",
+          },
+        ],
+      },
+
+      //
+      // Loading SASS/SCSS
+      //
+      {
+        test: /\.(s[ca]ss)$/,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: "sass-loader",
           },
         ],
       },
